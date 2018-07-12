@@ -1,12 +1,16 @@
 Solididty Disassembler
 ======================
 
+contact Dave Appleton : dave@akomba.com
+
 Geth includes a disassembler but annoyingly, like most solidity disassemblers, the addresses are in decimal.
 
 This prompted me to fix it - which was surprisingly easy as long as you have geth installed because geth does most of the work for you.
 
 I had been intending to remove the necessity for geth but since I intend to allow it to slurp contracts from the blockchain, I may still need it.
 Decide later. Maybe we need two versions :-)
+
+By the way - it can die on the last opcode. Will fix. Sometime.
 
 Why?
 ---
