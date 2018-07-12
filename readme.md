@@ -19,12 +19,16 @@ When I found a popular token was made up of 42 contracts of which only about 5 w
 
 I then started thinking that there must be a better way to at least find the entry points.
 
-myDasm is designed 
-This is intended to help people
+The Result : myDasm
+---
+
+myDasm is designed to
 
 * analyse gas costs
 * examine EVM code
-* look at unverified contracts listing entry points
+* look at unverified contracts 
+* list entry points
+* extract the ascii from PUSH32 command arguments
 
 Usage (so far), assuming that you build it
 
@@ -48,6 +52,18 @@ Vanilla output looks like..
 000006:  ISZERO 
 000007:  PUSH3 0x000010 
 00000B:  JUMPI 
+```
+
+note that PUSH4 instructions have the arguments checked against the registry of function hashes at 4byte.directory to find possible matches
+
+```
+00009B:  PUSH4 0xcf309012  //  locked()
+```
+
+PUSH32 instructions have the data decoded into characters if appropriate (all characters < 0x80)
+
+```
+000032: PUSH32 0x693a746f6b656e00000000000000000000000000000000000000000000000000  // i:token
 ```
 
 `-gas`
