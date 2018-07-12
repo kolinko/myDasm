@@ -112,4 +112,5 @@ Acknowledgements
 * The go-ethereum team for an amazing product
 * Howard Yeah for his great deep-dive into the EVM series
 * Trailofbits for their opcode-gas table
+* Piper Merriam for the Ethereum Function Signature Database
 
