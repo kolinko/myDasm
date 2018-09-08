@@ -1,4 +1,4 @@
-Solididty Disassembler
+Solidity Disassembler
 ======================
 
 contact Dave Appleton : dave@akomba.com
